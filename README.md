@@ -26,4 +26,5 @@ conda install --prefix ./gpu tensorflow-gpu==2.4.1
 ```
 
 ## Step 1: Preparing the Training Data
-We have used the [Spoken Wikipedia Corpus] (https://nats.gitlab.io/swc/). (SWC) to extract the audio files
+We have used the [Spoken Wikipedia Corpus](https://nats.gitlab.io/swc/) (SWC) to extract the audio files. We used words that has at least four characters long and occurred between 200 and 450 times. We have used 178 words for this preliminary task.
+We extracted two second clips for each occurrence of a target word and these two second clips were mixed with three different background noises with randomly assigned SNR levels (see the preprint paper for the details of these process).
