@@ -34,4 +34,11 @@ We extracted two second clips for each occurrence of a target word and these two
 python extract_words.py
 ```
 
+## Step 2: Cochleagram Creation
+We used cochleagrams of each two second clip as the input to the network. A cochleagram is very similar to a spectrogram which is used to represent audio signals in the time frequency domain. Cochleagrams were created using the code shared by [Feather et. al. (2019)](https://github.com/jenellefeather/tfcochleagram). Each two second clip was passed through a bank of 203 bandpass filters resulting a cochleagram representation of 203 x 400 (frequency x time). See Fig.1 for a schematic representation of training data preparation.
+
+### Command
+```
+python tfcochleagram_ns.py
+```
 
