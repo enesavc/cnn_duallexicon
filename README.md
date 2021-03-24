@@ -41,5 +41,6 @@ We used cochleagrams of each two second clip as the input to the network. A coch
 ```
 python tfcochleagram_ns.py
 ```
-![image](https://user-images.githubusercontent.com/32641692/112358672-efc42100-8ca6-11eb-932b-85d6e44e8603.png)
+![image](https://user-images.githubusercontent.com/32641692/112358864-17b38480-8ca7-11eb-8489-323c2792469a.png)
+
 
