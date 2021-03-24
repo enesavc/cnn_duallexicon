@@ -1,5 +1,5 @@
 # cnn_duallexicon
-This Repository contains the sample code or scripts used in the CNN Dual Lexicon project
+This Repository contains the sample code or scripts used in the CNN Dual Lexicon project developed by the [Gow Lab](https://gowlab.mgh.harvard.edu/), Department of Neurology, Massachusetts General Hospital/Harvard Medical School.
 
 ## CNN Dual Lexicon Preprint
 
