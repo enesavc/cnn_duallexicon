@@ -7,8 +7,8 @@ Avcu, E., Newman, O., Gow, D. (2021). A Tale of Two Lexica: Testing Computationa
 
 ## Link to Talks
 
-### Link to our Society of Neurobiology of Language Talk
+### Link to our Society of Neurobiology of Language Poster
 https://www.youtube.com/watch?v=nfQbnTl9hbY
 
-### Link to our Society of Neurobiology of Language Talk
+### Link to our Psychonomics Society Talk
 https://www.youtube.com/watch?v=mfVCsV8wSOg
