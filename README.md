@@ -3,7 +3,7 @@ This Repository contains the sample code or scripts used in the CNN Dual Lexicon
 
 **#CNN Dual Lexicon Paper**
 
-A Tale of Two Lexica:  Testing Computational Hypotheses with Deep Convolutional Neural Networks
+Avcu, E., Newman, O., Gow, D. (2021). A Tale of Two Lexica: Testing Computational Hypotheses with Deep Convolutional Neural Networks. arXiv preprint arXiv:XXXXXX.XXXXXX.
 
 **Link to Talks**
 
