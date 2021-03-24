@@ -43,4 +43,33 @@ python tfcochleagram_ns.py
 ```
 ![image](https://user-images.githubusercontent.com/32641692/112358864-17b38480-8ca7-11eb-8489-323c2792469a.png)
 
+## Step 3: CNNs
+We used CNNs comprised of convolution, normalization, pooling and fully connected layers (see Kell et. al., 2018 for the definitions of the operations of each layer). In addition, we used Gaussian Noise layer which apply zero centered Gaussian noise (0.1) after each convolutional layer during training. Our CNN architecture consisted of 21 layers (see below) with the final softmax classification layer. After the fully connected layer, a dropout (0.1) layer was also used. Finally, we leveraged early stopping to avoid overfitting (when the validation loss does not decrease after ten consecutive epochs, the training stops and classifier weights from the epoch that has the lowest validation loss were saved).
 
+Network Architecture
+
+•	Input (203x400): Cochleagram: 203 frequency bins x 400 time bins
+•	Conv1 (68x134x96): Convolution of 96 kernels with a kernel size of 9 and a stride of 3
+•	Gaus1 (68x134x96): Gaussian noise (0.1)
+•	Norm1 (68x134x96): Normalization over 5 adjacent kernels
+•	Pool1 (34x67x96): Max pooling over window size of 3x3 and a stride of 2
+•	Conv2 (17x34x256): Convolution of 256 kernels with a kernel size of 5 and a stride of 2
+•	Gaus2 (17x34x256): Gaussian noise (0.1)
+•	Norm2 (17x34x256): Normalization over 5 adjacent kernels
+•	Pool2 (9x17x256): Max pooling over a window size of 3x3 and a stride of 2
+•	Conv3 (9x17x512): Convolution of 512 kernels with a kernel size of 3 and a stride of 1
+•	Gaus3 (9x17x512): Gaussian noise (0.1)
+•	Norm3 (9x17x512): Normalization over 5 adjacent kernels
+•	Pool3 (5x9x512): Max pooling over a window size of 3x3 and a stride of 2
+•	Conv4 (5x9x1024): Convolution of 1024 kernels with a kernel size of 3 and a stride of 1
+•	Gaus4 (5x9x1024): Gaussian noise (0.1)
+•	Norm4 (5x9x1024): Normalization over 5 adjacent kernels
+•	Conv5 (5x9x512): Convolution of 512 kernels with a kernel size of 3 and a stride of 1
+•	Gaus5 (5x9x512): Gaussian noise (0.1)
+•	Norm5 (5x9x512): Normalization over 5 adjacent kernels
+•	Pool4 (3x5x512): Mean pooling over a window size of 3 and a stride of 2
+•	Dense1 (4096): A fully connected layer
+•	Dense2 (178 or 10): A fully connected layer before the softmax function for words (n = 178) or semantic domains (n = 10).
+
+
+### Command
