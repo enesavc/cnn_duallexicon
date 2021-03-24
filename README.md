@@ -7,7 +7,7 @@ Avcu, E., Newman, O., Gow, D. (2021). A Tale of Two Lexica: Testing Computationa
 
 ## Link to Talks
 
-### Link to our Society of Neurobiology of Language Poster
+### Link to our Society of Neurobiology of Language Poster Presentation
 https://www.youtube.com/watch?v=nfQbnTl9hbY
 
 ### Link to our Psychonomics Society Talk
@@ -26,3 +26,4 @@ conda install --prefix ./gpu tensorflow-gpu==2.4.1
 ```
 
 ## Step 1: Preparing the Training Data
+We have used the [Spoken Wikipedia Corpus] (https://nats.gitlab.io/swc/). (SWC) to extract the audio files
