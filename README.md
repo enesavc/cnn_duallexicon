@@ -46,12 +46,11 @@ python tfcochleagram_ns.py
 ## Step 3: CNNs
 We used CNNs comprised of convolution, normalization, pooling and fully connected layers (see Kell et. al., 2018 for the definitions of the operations of each layer). In addition, we used Gaussian Noise layer which apply zero centered Gaussian noise (0.1) after each convolutional layer during training. Our CNN architecture consisted of 21 layers (see below) with the final softmax classification layer. After the fully connected layer, a dropout (0.1) layer was also used. Finally, we leveraged early stopping to avoid overfitting (when the validation loss does not decrease after ten consecutive epochs, the training stops and classifier weights from the epoch that has the lowest validation loss were saved).
 
-Network Architecture
-
-•	Input (203x400): Cochleagram: 203 frequency bins x 400 time bins
-•	Conv1 (68x134x96): Convolution of 96 kernels with a kernel size of 9 and a stride of 3
-•	Gaus1 (68x134x96): Gaussian noise (0.1)
-•	Norm1 (68x134x96): Normalization over 5 adjacent kernels
+### Network Architecture
+-	Input (203x400): Cochleagram: 203 frequency bins x 400 time bins
+-	Conv1 (68x134x96): Convolution of 96 kernels with a kernel size of 9 and a stride of 3
+-	Gaus1 (68x134x96): Gaussian noise (0.1)
+-	Norm1 (68x134x96): Normalization over 5 adjacent kernels
 •	Pool1 (34x67x96): Max pooling over window size of 3x3 and a stride of 2
 •	Conv2 (17x34x256): Convolution of 256 kernels with a kernel size of 5 and a stride of 2
 •	Gaus2 (17x34x256): Gaussian noise (0.1)
