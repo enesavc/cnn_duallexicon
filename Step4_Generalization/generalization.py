@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+#This is a generic template of testing the features' ability to generalize.
 # # Check GPU
 
 # In[1]:
@@ -44,7 +44,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # In[3]:
 
 
-data_path = 'test_sets/Anina'
+data_path = 'test_sets/Anina' #we have used 4 test sets: two dorsal and two ventral
 batch_size=50
 datagen = ImageDataGenerator(validation_split=0.3)
 train_batches = datagen.flow_from_directory(data_path,
@@ -65,9 +65,9 @@ valid_batches = datagen.flow_from_directory(data_path,
 #Preparing Indermediate model
 import tensorflow as tf
 
-model = tf.keras.models.load_model('ExtractedModels/Dorsal178Model_Oct26.h5')
+model = tf.keras.models.load_model('ExtractedModels/dorsal.h5') # this is where we upload the weights from the trained model: dorsal.h5 or ventral.h5
 intermediate_layer_model = tf.keras.Model(inputs=model.input,
-                                 outputs=model.get_layer('Dense13').output)
+                                 outputs=model.get_layer('Dense1').output) # this is the penultimate dense layer (the one with 4096 nodes before the softmax)
 intermediate_layer_model.summary()
 
 
@@ -77,7 +77,7 @@ intermediate_layer_model.summary()
 new_model = tf.keras.Sequential()
 new_model.add(intermediate_layer_model)
 # new_model.add(Dropout(0.7))
-new_model.add(tf.keras.layers.Dense(2, name='Dense2'))
+new_model.add(tf.keras.layers.Dense(2, name='Dense2')) # this is the second dense layer the softmax layer where 2 refers to two classes in animate and inanimate test.
 new_model.add(tf.keras.layers.Activation("softmax"))
 #Here's the complete architecture of our model
 new_model.summary()
