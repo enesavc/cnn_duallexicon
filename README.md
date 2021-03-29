@@ -76,3 +76,4 @@ Both the dorsal and ventral networks were identical in terms of architectural pa
 ```
 python network.py
 ```
+![image](https://user-images.githubusercontent.com/32641692/112854090-7bf59000-907b-11eb-8ed6-8d0c04c6cecc.png)
