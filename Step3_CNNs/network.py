@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+#This is a generic network script.
 # # Check GPU
 
 # In[1]:
@@ -46,7 +46,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # In[3]:
 
 
-data_path = 'dorsal178'
+data_path = 'dorsal178' # or 'ventral10' for ventral training. This is a folder which contains 178 folders for dorsal and 10 folders for ventral task.
 batch_size=100
 datagen = ImageDataGenerator(validation_split=0.1)
 train_batches = datagen.flow_from_directory(data_path,
@@ -119,7 +119,7 @@ model.add(Dense(4096, activation='relu', name='Dense1'))
 #model.add(Dense(2048, activation='relu', name='Dense12'))
 #model.add(Dense(4096, activation='relu', name='Dense13'))
 model.add(Dropout(0.1))
-model.add(Dense(178, name='Dense2'))
+model.add(Dense(178, name='Dense2')) # for ventral use 10 classes
 model.add(Activation("softmax"))
 #Here's the complete architecture of our model
 model.summary()
