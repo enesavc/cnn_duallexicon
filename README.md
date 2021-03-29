@@ -81,3 +81,4 @@ python network.py
 ## Step 4: Generalization Tests
 For the articulatory generalization task, we used two tasks: (i) onset phoneme category (ii) syllable length. Onset phoneme category task was used to determine whether the first phoneme in a word was a fricative, nasal, stop, liquid, or vowel/glide (5 categories with 1050 exemplars each). Syllable length test was used to test whether words consisted  of one, two, three or four syllables (4 categories 900 exemplars each). For the semantic tasks, we again use two tasks: (i) the animacy and (ii) concreteness. The animacy task classified  nouns as animate or inanimate (2 categories with 400 exemplars each). The concreteness task classified nouns as being abstract or concrete (2 categories with 500 exemplars each).
 
+![image](https://user-images.githubusercontent.com/32641692/112855967-579ab300-907d-11eb-8b78-45e6859616cb.png)
